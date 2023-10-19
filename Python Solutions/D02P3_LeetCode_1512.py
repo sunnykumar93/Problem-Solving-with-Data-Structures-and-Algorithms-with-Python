@@ -1,14 +1,14 @@
-# Python3 , By:- Harsh Udai
-# Que. Number of Good Pairs
-
 class Solution:
     def numIdenticalPairs(self, nums: List[int]) -> int:
-        count=0
-        for i in range(0,len(nums)):
-            for j in range(i+1,len(nums)):
-                if(i<j and nums[i]==nums[j]):
-                    count+=1
-                    
-                    
-        return count
+        dic={}
+        for i in nums:
+            if i in dic:
+                dic[i]+=1
+            else:
+                dic[i]=1
         
+        count=0
+        for k,v in dic.items():
+            a=(v*(v-1))//2
+            count+=a
+        return count
