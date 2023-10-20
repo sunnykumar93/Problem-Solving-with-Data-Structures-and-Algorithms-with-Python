@@ -1,12 +1,8 @@
-# Python3 code coming soon
-
 class Solution:
     def subtractProductAndSum(self, n: int) -> int:
-        a = 0
-        b = 1
-        while n:
-            k = n % 10
-            n //= 10
-            a += k
-            b *= k
-        return b - a
+        s=0
+        m=1
+        for i in str(n):
+            s+=int(i)
+            m*=int(i)
+        return m-s
