@@ -1,11 +1,15 @@
-# Python3 code coming soon
 class Solution:
-    def numberOfSteps (self, num: int) -> int:
+    def numberOfSteps(self, num: int) -> int:
         count=0
+        if num==0:
+            return count
         while num>0:
-            count+=1
             if num%2==0:
-                num=num/2
+                count+=1
             else:
-                num=num-1
-        return count
+                count+=2
+            num=num>>1
+
+            
+            
+        return count-1
