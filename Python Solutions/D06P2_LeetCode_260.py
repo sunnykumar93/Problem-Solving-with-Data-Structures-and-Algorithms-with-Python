@@ -1,8 +1,15 @@
 class Solution:
     def singleNumber(self, nums: List[int]) -> List[int]:
+        dic={}
         l=[]
         for i in nums:
-            if nums.count(i)==1:
-                l.append(i)
+            if i in dic:
+                dic[i]+=1
+            else:
+                dic[i]=1
+        for k,v in dic.items():
+            if v==1:
+                l.append(k)
         return l
+
         
