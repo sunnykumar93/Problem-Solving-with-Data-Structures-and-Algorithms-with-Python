@@ -1,9 +1,11 @@
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
         l=[]
-        for i in range(len(nums)+1):
-            comb = combinations(nums, i)
-            for j in comb:
-                l.append(j)
+        l.append([])
+        for i in nums:
+            k=[]
+            for j in l:
+                k.append(j+[i])
+            l+=k    
         return l
             
