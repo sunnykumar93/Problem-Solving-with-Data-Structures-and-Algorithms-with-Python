@@ -1,8 +1,9 @@
 class Solution:
     def findTheDifference(self, s: str, t: str) -> str:
-        l=[]
-        for i in t:
-            l.append(i)
+        t1=0
+        t2=0
         for i in s:
-            l.remove(i)
-        return l[0]
+            t1+=ord(i)
+        for j in t:
+            t2+=ord(j)
+        return chr(t2-t1)
