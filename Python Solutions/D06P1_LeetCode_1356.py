@@ -1,4 +1,4 @@
-class Solution:
+lass Solution:
     def sortByBits(self, arr: List[int]) -> List[int]:
         dic={}
         l=[]
@@ -17,3 +17,4 @@ class Solution:
         
 
         return l
+        
