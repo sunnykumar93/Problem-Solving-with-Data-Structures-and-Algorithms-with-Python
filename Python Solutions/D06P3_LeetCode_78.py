@@ -8,4 +8,4 @@ class Solution:
                 k.append(j+[i])
             l+=k    
         return l
-            
+
